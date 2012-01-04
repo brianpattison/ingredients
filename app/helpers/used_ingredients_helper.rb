@@ -1,0 +1,2 @@
+module UsedIngredientsHelper
+end

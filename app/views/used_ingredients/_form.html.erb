@@ -1,0 +1,28 @@
+<%= form_for([@recipe, @used_ingredient]) do |f| %>
+  <% if @used_ingredient.errors.any? %>
+    <div class="error_messages">
+      <h2><%= pluralize(@used_ingredient.errors.count, "error") %> prohibited this ingredient from being saved:</h2>
+
+      <ul>
+      <% @used_ingredient.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.select :ingredient_id, Ingredient.order('name').collect {|i| [ i.name, i.id ] }, {:prompt => 'Select Ingredient'} %>
+  </div>
+  <div class="field">
+    <%= f.label :entered_amount, 'Amount' %><br />
+    <%= f.text_field :entered_amount, :placeholder => 'Ex. 2 cups, 1 tbs, 2 tsp, 4 floz' %>
+  </div>
+  <div class="actions">
+    <% if params[:action] == 'edit' || params[:action] == 'update' %>
+      <%= f.submit 'Update Ingredient' %>
+    <% else %>
+      <%= f.submit 'Add Ingredient' %>
+    <% end %>
+  </div>
+<% end %>

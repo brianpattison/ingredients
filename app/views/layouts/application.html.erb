@@ -8,6 +8,10 @@
   </head>
   <body>
     <h1 id="title"><%= link_to 'Angel Cups', '/' %></h1>
+    <div id="nav">
+      <%= link_to 'Recipes', recipes_path, :id => 'recipes_link', :class => params[:controller] %>
+      <%= link_to 'Ingredients', ingredients_path, :id => 'ingredients_link', :class => params[:controller] %>
+    </div>
     <div id="container">
       <%= content_tag :h1, yield(:title) if show_title? %>
       <% flash.each do |name, msg| %>

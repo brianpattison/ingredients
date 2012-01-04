@@ -1,0 +1,22 @@
+<% title "Recipes" %>
+
+<table>
+  <tr>
+    <th>Recipe</th>
+    <th>Yield</th>
+    <th>Cost Each</th>
+    <th>Total Cost</th>
+  </tr>
+<% @recipes.each do |recipe| %>
+  <tr>
+    <td><%= link_to recipe.name, recipe %></td>
+    <td><%= number_with_precision(recipe.yield, :precision => 0) %></td>
+    <td><%= number_to_currency(recipe.cost_each) %></td>
+    <td><%= number_to_currency(recipe.cost) %></td>
+  </tr>
+<% end %>
+</table>
+<hr />
+<p>
+  <%= link_to 'New Recipe', new_recipe_path %>
+</p>

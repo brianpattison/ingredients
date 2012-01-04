@@ -1,0 +1,31 @@
+<% title @recipe.name %>
+<table>
+  <tr>
+    <th>Ingredient</th>
+    <th>Amount</th>
+    <th>Cost</th>
+    <th></th>
+    <th></th>
+  </tr>
+<% @recipe.used_ingredients.sort_by{|u| u.ingredient.name }.each do |used_ingredient| %>
+  <tr>
+    <td><%= link_to used_ingredient.ingredient.name, [@recipe, used_ingredient] %></td>
+    <td><%= used_ingredient.entered_amount %></td>
+    <td><%= number_to_currency(used_ingredient.cost) %></td>
+    <td><%= link_to 'Edit', edit_recipe_used_ingredient_path(@recipe, used_ingredient) %></td>
+    <td><%= link_to 'Delete', [@recipe, used_ingredient], confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+<p>
+  <%= link_to 'Add Ingredient', new_recipe_used_ingredient_path(@recipe) %>  
+</p>
+<p>
+  <strong>Yield:</strong> <%= number_with_precision(@recipe.yield, :precision => 0) %><br />
+  <strong>Cost Each:</strong> <%= number_to_currency(@recipe.cost_each) %><br />
+  <strong>Total Cost:</strong> <%= number_to_currency(@recipe.cost) %>
+</p>
+<hr />
+<p>
+  <%= link_to 'Edit Recipe', edit_recipe_path(@recipe) %>
+</p>

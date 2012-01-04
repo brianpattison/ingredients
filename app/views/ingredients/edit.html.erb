@@ -1,0 +1,10 @@
+<% title "Edit Ingredient" %>
+
+<%= render 'form' %>
+<p>
+  <%= link_to 'Delete Ingredient', @ingredient, confirm: 'Are you sure?', method: :delete %>
+</p>
+<hr />
+<p>
+  <%= link_to 'Go Back', @ingredient %>
+</p>

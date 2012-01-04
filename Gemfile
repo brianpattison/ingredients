@@ -13,3 +13,5 @@ end
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'jquery-rails'
 gem 'omniauth-identity'
+
+gem 'ruby-units'

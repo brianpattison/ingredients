@@ -1,0 +1,20 @@
+<% title "Ingredients" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Amount</th>
+    <th>Cost</th>
+  </tr>
+<% @ingredients.each do |ingredient| %>
+  <tr>
+    <td><%= link_to ingredient.name, ingredient %></td>
+    <td><%= ingredient.entered_amount %></td>
+    <td><%= ingredient.cost %></td>
+  </tr>
+<% end %>
+</table>
+<hr />
+<p>
+  <%= link_to 'New Ingredient', new_ingredient_path %>
+</p>

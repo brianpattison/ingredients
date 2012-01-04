@@ -1,0 +1,10 @@
+<% title "Edit Recipe Name" %>
+
+<%= render 'form' %>
+<p>
+  <%= link_to 'Delete Recipe', @recipe, confirm: 'Are you sure?', method: :delete %>  
+</p>
+<hr />
+<p>
+  <%= link_to 'Go Back', @recipe %>  
+</p>

@@ -26,18 +26,37 @@ a {
   a {
     color: #fff;
     text-decoration: none;
+  }
+}
+#nav {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 1em auto 0.4em;
+  padding: 0;
+  width: 75%;
+  a {
+    color: #0077a4;
+    padding: 2px 15px 10px 0;
+    text-decoration: none;
     &:hover {
       text-decoration: underline;
     }
+  }
+  #recipes_link.recipes {
+    color: #003149;
+    text-decoration: underline;
+  }
+  #ingredients_link.ingredients {
+    color: #003149;
+    text-decoration: underline;
   }
 }
 #container {
   width: 75%;
   margin: 0 auto;
   background-color: #fff;
-  padding: 10px 40px 20px;
+  padding: 10px 20px 20px;
   border: solid 1px black;
-  margin-top: 20px;
   position: relative;
 }
 
@@ -87,4 +106,17 @@ a {
 
 form .field, form .actions {
   margin: 12px 0;
+}
+
+table {
+  width: 100%;
+  th, td {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    padding: 1em;
+    text-align: center;
+  }
+  th:first-child, td:first-child {
+    text-align: left;
+  }
 }

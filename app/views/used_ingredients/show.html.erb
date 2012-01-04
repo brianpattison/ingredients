@@ -1,0 +1,14 @@
+<% title @used_ingredient.ingredient.name %>
+
+<p style="font-size: 1.4em;">
+  <strong><%= @used_ingredient.entered_amount %></strong> for <strong><%= number_to_currency(@used_ingredient.cost) %></strong>
+</p>
+<p style="color: #888;">
+  <strong>Amount:</strong> <%= @used_ingredient.amount %><br />
+  <strong>Units:</strong> <%= @used_ingredient.units %><br />
+  <strong>Cost:</strong> <%= @used_ingredient.cost %>
+</p>
+<hr />
+<p>
+  <%= link_to 'Go Back', @recipe %>
+</p>

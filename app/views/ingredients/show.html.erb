@@ -1,0 +1,14 @@
+<% title @ingredient.name %>
+
+<p style="font-size: 1.4em;">
+  <strong><%= @ingredient.entered_amount %></strong> for <strong><%= number_to_currency(@ingredient.cost) %></strong>
+</p>
+<p style="color: #888;">
+  <strong>Amount:</strong> <%= @ingredient.amount %><br />
+  <strong>Units:</strong> <%= @ingredient.units %><br />
+  <strong>Cost:</strong> <%= @ingredient.cost %>
+</p>
+<hr />
+<p>
+  <%= link_to 'Edit Ingredient', edit_ingredient_path(@ingredient) %>
+</p>
