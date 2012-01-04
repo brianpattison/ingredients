@@ -4,7 +4,7 @@ Calculate the cost of recipes based on the cost of ingredients.
 
 ## How to Deploy
 
-I suggest using Heroku. They have great docs. It's as simple as cloning this repository, pushing to Heroku.
+I suggest using Heroku. They have great docs. It's as simple as cloning this repository and pushing to Heroku.
 
 ## Authentication
 
