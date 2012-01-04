@@ -29,6 +29,7 @@ a {
   }
 }
 #nav {
+  color: #0077a4;
   font-size: 1.2em;
   font-weight: bold;
   margin: 1em auto 0.4em;
@@ -42,11 +43,9 @@ a {
       text-decoration: underline;
     }
   }
-  #recipes_link.recipes {
-    color: #003149;
-    text-decoration: underline;
-  }
-  #ingredients_link.ingredients {
+  #recipes_link.recipes,
+  #ingredients_link.ingredients,
+  #identities_link.identities {
     color: #003149;
     text-decoration: underline;
   }

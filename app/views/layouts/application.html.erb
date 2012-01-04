@@ -11,6 +11,10 @@
     <div id="nav">
       <%= link_to 'Recipes', recipes_path, :id => 'recipes_link', :class => params[:controller] %>
       <%= link_to 'Ingredients', ingredients_path, :id => 'ingredients_link', :class => params[:controller] %>
+      <%= link_to 'Accounts', identities_path, :id => 'identities_link', :class => params[:controller] %>
+      <% if current_user %>
+        <span style="float: right;"><%= current_user.name %> | <%= link_to "Sign out", signout_path %></span>
+      <% end %>
     </div>
     <div id="container">
       <%= content_tag :h1, yield(:title) if show_title? %>
