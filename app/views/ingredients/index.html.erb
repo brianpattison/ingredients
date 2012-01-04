@@ -10,7 +10,7 @@
   <tr>
     <td><%= link_to ingredient.name, ingredient %></td>
     <td><%= ingredient.entered_amount %></td>
-    <td><%= ingredient.cost %></td>
+    <td><%= number_to_currency(ingredient.cost) %></td>
   </tr>
 <% end %>
 </table>
