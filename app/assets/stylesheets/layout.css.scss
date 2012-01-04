@@ -1,0 +1,90 @@
+body {
+  background-color: #78bfd3;
+  font-family: Verdana, Helvetica, Arial;
+  font-size: 14px;
+}
+
+a img {
+  border: none;
+}
+
+a {
+  color: #0077a4;
+}
+
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden;
+}
+
+#title {
+  font-size: 3em;
+  margin: 0.5em auto 0;
+  text-shadow: #45156b -1px 1px 2px;
+  width: 75%;
+  a {
+    color: #fff;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+#container {
+  width: 75%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 10px 40px 20px;
+  border: solid 1px black;
+  margin-top: 20px;
+  position: relative;
+}
+
+#flash_notice, #flash_error, #flash_alert {
+  padding: 5px 8px;
+  margin: 10px 0;
+  margin-right: 150px;
+}
+
+#flash_notice {
+  background-color: #cfc;
+  border: solid 1px #6c6;
+}
+
+#flash_error, #flash_alert {
+  background-color: #fcc;
+  border: solid 1px #c66;
+}
+
+.field_with_errors {
+  display: inline;
+}
+
+.error_messages {
+  width: 400px;
+  border: 2px solid #cf0000;
+  padding: 0px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  font-size: 12px;
+}
+
+.error_messages h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 10px;
+  font-size: 12px;
+  margin: 0;
+  background-color: #c00;
+  color: #fff;
+}
+
+.error_messages p {
+  margin: 8px 10px;
+}
+
+form .field, form .actions {
+  margin: 12px 0;
+}
