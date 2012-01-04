@@ -44,6 +44,7 @@ a {
     }
   }
   #recipes_link.recipes,
+  #recipes_link.used_ingredients,
   #ingredients_link.ingredients,
   #identities_link.identities {
     color: #003149;
@@ -57,10 +58,20 @@ a {
   padding: 10px 20px 20px;
   border: solid 1px #0077a4;
   position: relative;
+  hr {
+    border: none;
+    border-top: 1px solid #78bfd3;
+  }
 }
-hr {
-  border: none;
-  border-top: 1px solid #78bfd3;
+#footer {
+  margin-top: 0.5em;
+  text-align: center;
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 #flash_notice, #flash_error, #flash_alert {
