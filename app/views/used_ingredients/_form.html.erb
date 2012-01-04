@@ -13,6 +13,7 @@
 
   <div class="field">
     <%= f.select :ingredient_id, Ingredient.order('name').collect {|i| [ i.name, i.id ] }, {:prompt => 'Select Ingredient'} %>
+    <%= link_to 'New', new_ingredient_path, :target => '_blank' %>
   </div>
   <div class="field">
     <%= f.label :entered_amount, 'Amount' %><br />

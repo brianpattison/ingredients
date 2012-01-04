@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= yield(:title) + " - Angel Cups" || "Angel Cups" %></title>
+    <title><%= yield(:title) + " - Ingredients" || "Ingredients" %></title>
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tag %>
   </head>
   <body>
-    <h1 id="title"><%= link_to 'Angel Cups', '/' %></h1>
+    <h1 id="title"><%= link_to 'Ingredients', '/' %></h1>
     <div id="nav">
       <%= link_to 'Recipes', recipes_path, :id => 'recipes_link', :class => params[:controller] %>
       <%= link_to 'Ingredients', ingredients_path, :id => 'ingredients_link', :class => params[:controller] %>
